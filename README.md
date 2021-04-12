@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+- Typescript
+- React
+- Bootstrap
+- ES Lint
+
 ## Available Scripts
 
 In the project directory, you can run:
