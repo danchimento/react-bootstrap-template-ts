@@ -2,5 +2,16 @@
 @import './ReactResizable.css';
 
 .c-panel-container {
-    
+    background-color: $panel-background;
+    border-left: thin solid $panel-border-color;;
+    position: relative;
+
+    .react-resizable {
+        height: 100%;
+    }
+
+    .c-panel {
+        border-bottom: thin solid 
+    }
 }
+

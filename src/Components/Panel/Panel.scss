@@ -1,6 +1,6 @@
 @import '../../theme.scss';
 
 .c-panel {
-    background: #ddd;
+    background: $panel-background;
     padding: map-get($map: $spacers, $key: 3);
 }

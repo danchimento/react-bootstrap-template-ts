@@ -1,0 +1,16 @@
+@import '../../theme.scss';
+
+.dashboard {
+    display: grid;
+    grid-template: 'main panels';
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr;
+
+    .panels {
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        overflow-y: auto;
+    }
+}

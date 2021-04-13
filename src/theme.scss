@@ -15,6 +15,10 @@ $danger: #FF6161;
 $color-grey: #6A6E75;
 $subtle-grey: #F1F1F5;
 
+// Panels
+$panel-background: $subtle-grey;
+$panel-border-color: $color-grey;
+
 @import 'bootstrap/scss/_functions.scss';
 @import 'bootstrap/scss/_variables.scss';
 @import 'bootstrap/scss/_mixins.scss';

@@ -4,23 +4,23 @@ import PanelContainer from '../../Components/PanelContainer/PanelContainer';
 import './Dashboard.scss';
 
 const Dashboard = () => {
-    return <div>
-        <PanelContainer>
+    return (<div className='dashboard'>
+        <div>Main content</div>
+        <PanelContainer className='panels'>
             <Panel>
-                    <button className="btn btn-primary">Testing </button>
+                    Panel 1
             </Panel>
             <Panel>
-                    <button className="btn btn-primary">Testing </button>
+                    Panel 2
             </Panel>
             <Panel>
-                    <button className="btn btn-primary">Testing </button>
+                    Panel 3
             </Panel>
             <Panel>
-                    <button className="btn btn-primary">Testing </button>
+                    Panel 4
             </Panel>
         </PanelContainer>
-        
-    </div>
+    </div>)
 }
 
 export default Dashboard;

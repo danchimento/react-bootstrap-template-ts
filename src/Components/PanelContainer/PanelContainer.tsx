@@ -1,28 +1,37 @@
-import React, { Component, ReactNode } from 'react';
-import { ResizableBox, Resizable } from 'react-resizable';
+import React, { ReactNode } from 'react';
+import { ResizableBox } from 'react-resizable';
 import './PanelContainer.scss';
 
 interface Props {
-    children: ReactNode,
-    minWidth: number,
-    maxWidth: number,
-
+    children?: ReactNode,
+    minWidth?: number,
+    maxWidth?: number,
+    backgroundColor?: string,
+    className?: string
 }
 
-class PanelContainer extends Component<Props> {
-    public static defaultProps = {
-        minWidth: 150,
-        maxWidth: 600
-    };
-
-    render() {
-        return <ResizableBox 
-            width={200} height={200}
-            resizeHandles={["e"]}
-            minConstraints={[100, 100]} maxConstraints={[300, 300]}
-            className='c-panel-container'>{this.props.children}</ResizableBox>
-    } 
+const defaultProps: Props = {
+    children: null,
+    minWidth: 150,
+    maxWidth: 600,
+    backgroundColor: "#666"
 }
+
+const PanelContainer: React.FunctionComponent<Props> = (props: Props) => {
+    return (
+        <div className={`c-panel-container ${props.className}`}>
+            <ResizableBox
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                width={props.minWidth!} height={Infinity}
+                resizeHandles={["w"]}
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                minConstraints={[props.minWidth!, 0]} maxConstraints={[props.maxWidth!, 300]}>{props.children}
+            </ResizableBox>
+        </div>
+    )
+}
+
+PanelContainer.defaultProps = defaultProps;
 
 export default PanelContainer;
 
